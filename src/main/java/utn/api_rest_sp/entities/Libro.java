@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -19,8 +20,9 @@ public class Libro extends Base{
     @Column(name="título")
     private String titulo;
 
+    @Temporal(TemporalType.DATE)
     @Column(name="fecha")
-    private int fecha;
+    private Date fecha;
 
     @Column(name="género")
     private String genero;
